@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "My Counter",
+  "version": "1.0",
+  "description": "数を数えます。以下のキー操作でカウントを操作します。カーソルキー／スペースキー／エンターキー：カウントアップ Dキー：カウントダウン Escapeキー：カウントリセット",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "My Counter",
+    "default_icon": "icon.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+:root {
+    --Red: #ff0000;
+    --Yellow: #f8fc00;
+    --Pink: #ff00ea;
+    --Green: #00ff40;
+    --Purple: #4400ff;
+}
+
+.Counter {
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    font-size: 128px;
+}
